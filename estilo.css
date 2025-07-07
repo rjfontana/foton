@@ -283,6 +283,8 @@ div#feedback {
   text-align: center;
   color: #00eaff;
   padding: 0 16px;
+  z-index: 1;
+  position: relative;
 }
 
 .site-header h1 {
@@ -294,7 +296,7 @@ div#feedback {
 }
 
 .site-intro {
-  background: rgba(10, 30, 60, 0.45);
+  background: rgba(10, 30, 60, 0.85); /* Mais opaco */
   border-radius: 10px;
   display: inline-block;
   padding: 16px 24px;
@@ -302,6 +304,10 @@ div#feedback {
   font-size: 1.1em;
   box-shadow: 0 0 12px #00eaff22;
   margin-bottom: 0;
+  max-width: 95vw;
+  z-index: 1;
+  position: relative;
+  word-break: break-word;
 }
 
 .site-intro .intro-icone {
