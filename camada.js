@@ -49,21 +49,17 @@ function verificarSenha(n) {
 
     atualizarProgresso(n);
 
-    // Move o campo respondido para o final do formulário
     const labelAtual = document.getElementById('campoSenha' + n);
     if (labelAtual && form) form.appendChild(labelAtual);
 
-    // Remove todos os campos ativos
     document.querySelectorAll('.senha-camadas label').forEach(l => l.classList.remove('active'));
 
-    // Mostra próximo campo OU simulador de ângulo na etapa 10
     if (n === 10) {
       const simuladorAngulo = document.getElementById('simuladorAngulo');
       if (simuladorAngulo) simuladorAngulo.style.display = 'block';
     } else if (n > 1) {
       mostrarProximaSenha(n - 1);
     } else {
-      // Todas as senhas foram completadas!
       mostrarMensagemFinal();
     }
   } else {
