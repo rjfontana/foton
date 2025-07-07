@@ -326,12 +326,12 @@ div#feedback {
 }
 
 .mensagem-final-icone {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   border-radius: 0;
   background: none;
   box-shadow: none;
-  margin-right: 16px;
+  margin-right: 24px;
   object-fit: contain;
 }
 
@@ -351,4 +351,105 @@ div#feedback {
 
 .mensagem-final-box a:hover {
   color: #00eaff;
+}
+
+@media (max-width: 700px) {
+  .painel {
+    width: 98vw;
+    max-width: 100vw;
+    aspect-ratio: unset;
+    min-height: 180px;
+  }
+
+  .barraProgressoHUD {
+    width: 96vw;
+    max-width: 100vw;
+    height: 14px;
+    margin-top: 16px;
+  }
+
+  .container-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    width: 98vw;
+    max-width: 100vw;
+    padding: 0 2vw;
+  }
+
+  #simuladorEspelho,
+  .senha-camadas,
+  #simuladorAngulo {
+    min-width: 0;
+    max-width: 100vw;
+    width: 100%;
+    padding: 14px 4vw;
+    font-size: 1em;
+  }
+
+  .senha-camadas label {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  input[type="password"] {
+    width: 98%;
+    min-width: 0;
+    font-size: 1em;
+    padding: 7px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1em;
+    padding: 8px 0;
+  }
+
+  .site-header {
+    max-width: 100vw;
+    padding: 0 2vw;
+    margin: 18px auto 12px auto;
+  }
+
+  .site-header h1 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+
+  .site-intro {
+    font-size: 1em;
+    padding: 10px 8px;
+  }
+
+  .mensagem-final-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 6vw;
+    margin: 24px auto;
+    max-width: 98vw;
+    text-align: center;
+  }
+
+  .mensagem-final-icone {
+    width: 90px;
+    height: 90px;
+    margin: 0 0 10px 0;
+  }
+
+  .mensagem-final-box h2 {
+    font-size: 1.1em;
+  }
+
+  /* Imagens decorativas menores e menos intrusivas */
+  .decoracao-fundo,
+  .decoracao-fundo-esquerda,
+  .decoracao-fundo-inferior,
+  .decoracao-fundo-inferior-esquerda,
+  .decoracao-fundo-centro-direita,
+  .decoracao-fundo-centro-esquerda {
+    width: 80px;
+    max-width: 30vw;
+    opacity: 0.7;
+  }
 }
