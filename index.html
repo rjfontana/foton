@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Camadas Interativas</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- Título e Introdução -->
+  <header class="site-header">
+    <h1>Núcleo Fotônico: Ative os Cristais e Restaure a Energia</h1>
+    <section class="site-intro">
+      <span class="intro-icone">🔹</span>
+      <strong>Introdução:</strong>
+      <span>
+        Cada cristal inativo representa uma camada de conhecimento esquecida.<br>
+        Para reativá-los, você deve inserir as senhas corretas — obtidas ao dominar os conceitos escondidos nos desafios.
+      </span>
+    </section>
+  </header>
+
+  <img src="0.png" alt="" class="decoracao-fundo" aria-hidden="true">
+  <img src="14.png" alt="" class="decoracao-fundo-esquerda" aria-hidden="true">
+  <img src="15.png" alt="" class="decoracao-fundo-inferior" aria-hidden="true">
+  <img src="16.png" alt="" class="decoracao-fundo-inferior-esquerda" aria-hidden="true">
+  <img src="17.png" alt="" class="decoracao-fundo-centro-direita" aria-hidden="true">
+  <img src="18.png" alt="" class="decoracao-fundo-centro-esquerda" aria-hidden="true">
+  <!-- Painel com camadas -->
+  <div class="painel" id="painel">
+    <img src="13.png" class="camada fundo" alt="Fundo">
+    <img src="12.png" class="camada" id="img12" alt="Camada 12">
+    <img src="11.png" class="camada" id="img11" alt="Camada 11">
+    <img src="10.png" class="camada" id="img10" alt="Camada 10">
+    <img src="9.png" class="camada" id="img9" alt="Camada 9">
+    <img src="8.png" class="camada" id="img8" alt="Camada 8">
+    <img src="7.png" class="camada" id="img7" alt="Camada 7">
+    <img src="6.png" class="camada" id="img6" alt="Camada 6">
+    <img src="5.png" class="camada" id="img5" alt="Camada 5">
+    <img src="4.png" class="camada" id="img4" alt="Camada 4">
+    <img src="3.png" class="camada" id="img3" alt="Camada 3">
+    <img src="2.png" class="camada" id="img2" alt="Camada 2">
+    <img src="1.png" class="camada" id="img1" alt="Camada 1">
+  </div>
+
+  <!-- Barra de progresso -->
+  <div class="barraProgressoHUD">
+    <div id="barraProgresso"></div>
+  </div>
+
+  <!-- Container flexível para o simulador e o formulário -->
+  <div class="container-flex">
+    <!-- Simulador de Espelho -->
+    <div id="simuladorEspelho">
+      <div style="color:#fff; margin-bottom:8px;">
+        <strong>Etapa 1:</strong> Ajuste a posição da imagem usando o controle deslizante abaixo.<br>
+        <span>Deixe a imagem simétrica em relação ao espelho para prosseguir.</span>
+      </div>
+      <canvas id="canvas" width="800" height="320" style="background:#000;display:block;margin-bottom:10px"></canvas>
+      <div style="margin-bottom:8px; color:#fff;">
+        <label>Distância pessoa-imagem: <span id="distancia">50.0</span> m</label> |
+        <label>Distância pessoa-espelho: <span id="distanciaEspelho">25.0</span> m</label>
+      </div>
+      <input type="range" id="sliderImagem" min="0" max="800" value="650" oninput="ajustarImagem(this.value)">
+      <div id="feedback" style="margin-top:8px; color:#fff;"></div>
+    </div>
+
+    <!-- Campos de senha -->
+    <form class="senha-camadas" style="display:none; margin-left:32px;" onsubmit="return false;">
+      <label id="campoSenha12" class="active">
+        <span>Senha 1</span>
+        <input type="password" id="senha12" aria-label="Senha 1" autocomplete="off" />
+        <button type="button" onclick="verificarSenha(12)">OK</button>
+      </label>
+      <!-- Os outros campos são gerados via JavaScript -->
+    </form>
+  </div>
+
+  <!-- Simulador de Ângulo - Etapa 10 -->
+  <div id="simuladorAngulo" style="display:none; margin-bottom:24px;">
+    <div style="color:#fff; margin-bottom:8px;">
+      <strong>Etapa 10:</strong> Ajuste o ângulo para 90º e responda corretamente para prosseguir.<br>
+      <span>Quantas imagens são formadas nessa associação de ângulos?</span>
+    </div>
+    <canvas id="canvasAngulo" width="500" height="400" style="background:#000;display:block;margin-bottom:10px"></canvas>
+    <label style="color:#fff;">Ângulo α: <span id="valorAngulo">30</span>°</label>
+    <input type="range" id="angulo" min="10" max="90" value="30" step="1" style="width:200px;vertical-align:middle;">
+    <br>
+    <label style="color:#fff;">Sua resposta: <input id="resposta" type="number" min="1" style="width:60px;"></label>
+    <button type="button" id="btnVerificarAngulo">Verificar</button>
+    <div id="feedbackAngulo" style="margin-top:8px; color:#fff;"></div>
+  </div>
+
+  <script src="camada.js"></script>
+</body>
+</html>
