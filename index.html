@@ -60,7 +60,11 @@
         <label>Distância pessoa-imagem: <span id="distancia">50.0</span> m</label> |
         <label>Distância pessoa-espelho: <span id="distanciaEspelho">25.0</span> m</label>
       </div>
-      <input type="range" id="sliderImagem" min="0" max="800" value="650" oninput="ajustarImagem(this.value)">
+      <div class="slider-com-setas">
+        <button type="button" class="btn-seta" id="seta-esquerda" aria-label="Diminuir">&#8592;</button>
+        <input type="range" id="sliderImagem" min="0" max="800" value="650" oninput="ajustarImagem(this.value)">
+        <button type="button" class="btn-seta" id="seta-direita" aria-label="Aumentar">&#8594;</button>
+      </div>
       <div id="feedback" style="margin-top:8px; color:#fff;"></div>
     </div>
 
