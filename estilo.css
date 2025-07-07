@@ -15,6 +15,47 @@ body {
   min-height: 100vh;
 }
 
+.site-header {
+  width: 100%;
+  max-width: 900px;
+  margin: 64px auto 24px auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 0 16px;
+}
+
+.site-header h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  color: #00eaff;
+  text-shadow: 0 2px 16px #00eaff33;
+}
+
+.site-intro {
+  backdrop-filter: blur(6px);
+  background: rgba(10, 30, 60, 0.96);
+  border-radius: 14px;
+  display: inline-block;
+  padding: 20px 32px;
+  color: #fff;
+  font-size: 1.15em;
+  box-shadow: 0 0 16px #00eaff33;
+  margin-bottom: 0;
+  max-width: 800px;
+  z-index: 11;
+  position: relative;
+  word-break: break-word;
+}
+
+.site-intro .intro-icone {
+  font-size: 1.3em;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
 .painel {
   position: relative;
   width: 80vw;
