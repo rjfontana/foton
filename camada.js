@@ -94,6 +94,8 @@ const distEl = document.getElementById('distancia');
 const distEspelho = document.getElementById('distanciaEspelho');
 const sliderImagem = document.getElementById('sliderImagem');
 const feedback = document.getElementById('feedback');
+const setaEsquerda = document.getElementById('seta-esquerda');
+const setaDireita = document.getElementById('seta-direita');
 
 let objX = 150;
 const espelhoX = 400;
@@ -314,6 +316,15 @@ if (canvasAngulo && ctxAngulo && sliderAngulo && valorAngulo && feedbackAngulo &
 
   desenhar(parseInt(sliderAngulo.value));
 }
+
+setaEsquerda.addEventListener('click', () => {
+  sliderImagem.stepDown();
+  sliderImagem.dispatchEvent(new Event('input'));
+});
+setaDireita.addEventListener('click', () => {
+  sliderImagem.stepUp();
+  sliderImagem.dispatchEvent(new Event('input'));
+});
 
 function mostrarProximaSenha(n) {
   // Remove todos os campos ativos
